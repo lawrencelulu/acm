@@ -4,6 +4,6 @@ heroImage: /hero.jpeg
 heroText: OJ刷题
 tagline: 记录刷题的点滴
 actionText: 查看 →
-actionLink: /pat/
+actionLink: /basic/
 footer: MIT Licensed | Copyright © 2019-present lawrencelu
 ---

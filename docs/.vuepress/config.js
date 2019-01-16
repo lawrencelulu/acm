@@ -28,11 +28,13 @@ module.exports = {
   themeConfig:{
     sidebar: {
       '/pat/': generateRoutes('pat'),
-      '/eoj/': generateRoutes('eoj')
+      '/eoj/': generateRoutes('eoj'),
+      '/basic/': generateRoutes('basic'),
     },
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'PAT', link: '/pat/' },
+      { text: '基础题', link: '/basic/' },
+      { text: 'EOJ', link: '/eoj/' },
       { text: 'EOJ', link: '/eoj/' },
       { text: 'GitHub', link: 'https://github.com/lawrencelulu' },
     ]
