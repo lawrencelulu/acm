@@ -9,13 +9,19 @@ function generateRoutes(name){
       names.push(path.parse(children.name).name)
     }
   });
+  // console.log(names);
   return names;
 }
 module.exports = {
   title: 'Online Judge',
   description: '记录刷题的点滴',
+  base: '/acm/',
+  repo: 'https://github.com/lawrencelulu/acm',
   markdown: {
-    lineNumbers: true
+    config: md => {
+      md.use(require('markdown-it-sup'));
+      md.use(require('markdown-it-sub'));
+    }
   },
   plugins: [
     ['@vuepress/back-to-top', true],
@@ -26,15 +32,33 @@ module.exports = {
     ['@vuepress/medium-zoom']
   ],
   themeConfig:{
+    sidebarDepth: 2,
+    lastUpdated: 'Last Updated',
+    serviceWorker: {
+      updatePopup: true
+    },
     sidebar: {
+      '/basic/':[
+        '',
+        'mode',
+        'factorial'
+      ],
       '/pat/': generateRoutes('pat'),
-      '/eoj/': generateRoutes('eoj'),
-      '/basic/': generateRoutes('basic'),
+      '/stl/': generateRoutes('stl'),
+      '/eoj/': generateRoutes('eoj')
     },
     nav: [
       { text: 'Home', link: '/' },
-      { text: '基础题', link: '/basic/' },
-      { text: 'EOJ', link: '/eoj/' },
+      {
+        text: 'C/C++',
+        items: [
+          { text: '基础', link: '/basic/' },
+          {
+            text: 'STL', link: '/stl/'
+          }
+        ]
+      },
+      { text: 'PAT', link: '/pat/' },
       { text: 'EOJ', link: '/eoj/' },
       { text: 'GitHub', link: 'https://github.com/lawrencelulu' },
     ]

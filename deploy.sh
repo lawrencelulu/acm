@@ -14,7 +14,7 @@ echo 'lawrencelulu.github.io/acm' > CNAME
 
 git init
 git add -A
-git commit -m 'add'
+git commit -m 'add contents'
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 git push -f git@github.com:lawrencelulu/acm.git master:gh-pages
