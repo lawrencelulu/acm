@@ -15,7 +15,7 @@ function generateRoutes(name){
 module.exports = {
   title: 'Online Judge',
   description: '记录刷题的点滴',
-  base: '/acm/',
+  // base: '/acm/',
   repo: 'https://github.com/lawrencelulu/acm',
   markdown: {
     config: md => {
@@ -38,11 +38,7 @@ module.exports = {
       updatePopup: true
     },
     sidebar: {
-      '/basic/':[
-        '',
-        'mode',
-        'factorial'
-      ],
+      '/basic/':generateRoutes('basic'),
       '/pat/': generateRoutes('pat'),
       '/stl/': generateRoutes('stl'),
       '/eoj/': generateRoutes('eoj')
