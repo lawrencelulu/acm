@@ -41,7 +41,9 @@ module.exports = {
       '/basic/':generateRoutes('basic'),
       '/pat/': generateRoutes('pat'),
       '/stl/': generateRoutes('stl'),
-      '/eoj/': generateRoutes('eoj')
+      '/eoj/': generateRoutes('eoj'),
+      '/leetcode/': generateRoutes('leetcode'),
+      '/algorithm/': generateRoutes('algorithm'),
     },
     nav: [
       { text: 'Home', link: '/' },
@@ -53,6 +55,12 @@ module.exports = {
             text: 'STL', link: '/stl/'
           }
         ]
+      },
+      {
+        text: 'Algorithm', link: '/algorithm/'
+      },
+      {
+        text: 'Leetcode', link: '/leetcode/'
       },
       { text: 'PAT', link: '/pat/' },
       { text: 'EOJ', link: '/eoj/' },
