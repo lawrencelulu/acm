@@ -38,7 +38,6 @@ void init(int n){
 
 int main()
 {
-    freopen("input.txt", "r", stdin);
     int n, m, a, b;
     scanf("%d %d", &n, &m);
     init(n);
