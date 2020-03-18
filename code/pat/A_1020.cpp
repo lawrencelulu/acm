@@ -32,6 +32,7 @@ node* create(int postL, int postR, int inL, int inR){
     root->rchild = create(postL + numLeft, postR - 1, k+1, inR);
     return root;
 }
+
 void BFS(node* root){
     int num = 0;
     queue<node*> q;

@@ -16,12 +16,7 @@ int month[13][2] = {
     {31, 31}, {31, 31}, {30, 30}, {31, 31}, {30, 30}, {31, 31}
 };
 bool isLeap(int year){
-    if(year % 4 == 0 && year % 100 != 0){
-        return true;
-    } else if(year % 400 == 0){
-        return true;
-    }
-    return false;
+    return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 }
 int main()
 {
